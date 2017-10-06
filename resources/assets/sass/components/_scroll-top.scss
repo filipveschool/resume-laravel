@@ -1,0 +1,56 @@
+// =============================================================================
+// _SCROLL-TOP.SCSS
+// -----------------------------------------------------------------------------
+// Site styles.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+//   01. Base Styles
+// =============================================================================
+
+// Base Styles
+// =============================================================================
+
+.scroll-top {
+  position: fixed;
+  z-index: 1031;
+  bottom: 10px;
+  width: 45px;
+  //width: 35px;
+  //height: 35px;
+  height: 45px;
+  margin-bottom: -75px;
+  //border: 2px solid black-color();
+  //border: 2px solid white-color();
+  border: 2px solid red-color();
+  //font-size: 25px;
+  font-size: 37px;
+  //line-height: 27px;
+  line-height: 37px;
+  text-align: center;
+  //color: $black;
+  //color: white-color();
+  color: red-color();
+  border-radius: 100%;
+  transition: margin-bottom 0.6s ease, opacity 0.3s ease;
+
+  &.in {
+    margin-bottom: 0;
+    @include opacity(0.375);
+
+    &:hover {
+      @include opacity(0.825);
+    }
+  }
+
+  &.left  { left: 10px;  }
+  &.right { right: 10px; }
+
+  &:hover {
+    //color: black-color();
+    //color: white-color();
+    color: red-color();
+  }
+}

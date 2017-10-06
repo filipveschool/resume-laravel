@@ -1,0 +1,173 @@
+// Generic
+@mixin font-size($font-size: default, $type: rem) {
+  font-size: font-size($font-size, $type);
+}
+
+@mixin font($family: default, $weight: normal, $style: inherit) {
+  font-family: font-family($family);
+  font-style: $style;
+
+  //@if $family != mapping(mapping($font-families, icons), $family) {
+  @if $family != 'icons' {
+    font-weight: font-weight($weight, $family);
+  }
+}
+
+// Shortcuts
+@mixin font-icons {
+  @include font(icons);
+}
+
+@mixin font-thin {
+  @include font(default, thin);
+}
+
+@mixin font-light {
+  @include font(default, light);
+}
+
+@mixin font-medium {
+  @include font(default, medium);
+}
+
+@mixin font-bold {
+  @include font(default, bold);
+}
+
+@mixin font-black {
+  @include font(default, black);
+}
+
+@mixin font-secondary {
+  @include font(secondary);
+}
+
+@mixin font-secondary-bold {
+  @include font(secondary, bold);
+}
+
+@mixin font-fixed {
+  @include font(fixed);
+}
+
+@mixin font-fixed-bold {
+  @include font(fixed, bold);
+}
+
+@mixin font-family-serif($family: serif) {
+  font-family: font-family($family);
+}
+
+@mixin font-family-sans-serif($family: sans-serif) {
+  font-family: font-family($family);
+}
+
+@mixin font-family-monospace($family: mono) {
+  font-family: font-family($family);
+}
+
+// ----------------------------------------------------------------------
+// Font Legibility
+// ----------------------------------------------------------------------
+
+////
+/// @author Filip Vanden Eynde
+/// @group Typography
+/// @ignore de GROUP annotation bepaalt de naam van de hoofdgroep.
+////
+
+/// Improve the font rendering to better match client PSDs. Side effects include: slower
+/// rendering of pages. Use only when necessary!
+///
+///
+/// @example scss - Basic Usage Sass
+///    .foo {
+///        @include font-legibility;
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .foo {
+///          text-rendering: optimizeLegibility;
+///          -moz-font-feature-settings: 'liga', 'kern';
+///          -moz-osx-font-smoothing: grayscale;
+///          -webkit-font-smoothing: antialiased;
+///    }
+
+@mixin font-legibility {
+  -moz-font-feature-settings: "liga", "kern"; // Control over advanced typographic features in OpenType fonts.
+  -moz-osx-font-smoothing: grayscale; // Control the application of anti-aliasing when fonts are rendered in OS X.
+  -webkit-font-smoothing: antialiased; // Control the application of anti-aliasing when fonts are rendered.
+  text-rendering: optimizeLegibility; // Improved kerning pairs & ligatures
+}
+
+// ----------------------------------------------------------------------
+// Font Smoothing
+// ----------------------------------------------------------------------
+
+////
+/// @author Filip Vanden Eynde
+/// @group Typography
+/// @ignore de GROUP annotation bepaalt de naam van de hoofdgroep.
+////
+
+/// Improve the font rendering to better match client PSDs. Side effects include: slower
+/// rendering of pages. Use only when necessary!
+///
+/// @example scss - Basic Usage Sass
+///    .foo {
+///        @include font-smoothing;
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .foo {
+//			-webkit-font-smoothing: antialiased;
+//			-moz-osx-font-smoothing: grayscale;
+///    }
+
+@mixin font-smoothing {
+  @include text-antialiasing(pixel);
+}
+
+// Font Size
+// =============================================================================
+
+//
+// Provides rem unit sizing with a px fallback.
+// Must set html font-size to 62.5% since base 10 is used for px fallback.
+// 1. $sizeValue of 1.6 results in 16px and 1.6rem.
+//
+
+@mixin font-size-calc($size-value: 1.6) { // 1
+  font-size: ($size-value * 10) + px;
+  // font-size: $sizeValue + rem;
+}
+
+//
+// Font Awesome.
+//
+
+@mixin font-awesome() {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/// @example scss - Usage
+///   .wrapper {
+///     @include opacity(0.8);
+///   }
+///
+/// @example css - CSS Output
+///   .wrapper {
+///     opacity: 0.8;
+///     filter: opacity: 0.8;
+///   }
+
+@mixin opacity($opacity: 0.5) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+}

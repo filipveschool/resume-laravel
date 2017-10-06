@@ -1,0 +1,25 @@
+.lead {
+  text-align: center;
+  color: #727878;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  //width: 510px;
+  margin: 0 auto 20px auto;
+}
+
+.quote-author {
+  font-weight: bold;
+}
+
+/*@include gridlex-min-sm-break() {
+  .lead {
+    font-size: 21px;
+  }
+}*/
+
+@include media-breakpoint-up(md) {
+  .lead {
+    font-size: 21px;
+  }
+}

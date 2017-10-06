@@ -1,0 +1,98 @@
+@function color($pallete, $key: default, $opacity: 1) {
+  @return rgba(mapping($pallete, $key), $opacity);
+}
+
+@function blue-color($key: default, $opacity: 1) {
+  @return rgba(mapping($blue-colormap, $key), $opacity);
+}
+
+@function green-color($key: default, $opacity: 1) {
+  @return rgba(mapping($green-colormap, $key), $opacity);
+}
+
+@function gray-color($key: default, $opacity: 1) {
+  @return rgba(mapping($gray-colormap, $key), $opacity);
+}
+
+@function red-color($key: default, $opacity: 1) {
+  @return rgba(mapping($red-colormap, $key), $opacity);
+}
+
+@function yellow-color($key: default, $opacity: 1) {
+  @return rgba(mapping($yellow-colormap, $key), $opacity);
+}
+
+@function orange-color($key: default, $opacity: 1) {
+  @return rgba(mapping($orange-colormap, $key), $opacity);
+}
+
+@function white-color($opacity: 1) {
+  @return rgba(mapping($color, white), $opacity);
+}
+
+@function black-color($opacity: 1) {
+  @return rgba(mapping($color, black), $opacity);
+}
+
+@function link-color($key: default, $opacity: 1) {
+  @return rgba(mapping($link-color-colormap, $key), $opacity);
+}
+
+@function social-color($key: twitter, $opacity: 1) {
+  @return rgba(mapping($social-color, $key), $opacity);
+}
+
+@function text-color($opacity: 1) {
+  @return rgba(mapping($color, text), $opacity);
+}
+
+@function brand-color($key: default, $opacity: 1) {
+  @return rgba(mapping($brand, $key), $opacity);
+}
+
+/// Mixes a color with black.
+///
+/// @param {Color} $color
+///
+/// @param {Number (Percentage)} $percent
+///   The amount of black to be mixed in.
+///
+/// @example scss - Usage
+///   .element {
+///     background-color: shade(#ffbb52, 60%);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     background-color: #664a20;
+///   }
+///
+/// @return {Color}
+
+@function shade($color, $percent) {
+  @return mix(#000, $color, $percent);
+}
+
+/// Mixes a color with white.
+///
+/// @param {Color} $color
+///
+/// @param {Number (Percentage)} $percent
+///   The amount of white to be mixed in.
+///
+/// @example scss - Usage
+///   .element {
+///     background-color: tint(#6ecaa6, 40%);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     background-color: #a8dfc9;
+///   }
+///
+/// @return {Color}
+
+@function tint($color, $percent) {
+  @return mix(#fff, $color, $percent);
+}
+

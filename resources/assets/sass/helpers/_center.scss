@@ -1,0 +1,15 @@
+.h-center {
+  @include center;
+}
+
+.h-center-horizontal {
+  @include position-center-horizontal();
+}
+
+.h-center-vertical {
+  @include position-center-vertical();
+}
+
+.text-center {
+  text-align: center;
+}

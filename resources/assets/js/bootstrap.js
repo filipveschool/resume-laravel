@@ -10,10 +10,17 @@ import Popper from 'popper.js/dist/umd/popper.js';
 
 try {
     window.$ = window.jQuery = require('jquery');
+    require('jquery-ui-bundle');
     //window.Popper = require('popper.js');
     window.Popper = Popper;
 
     require('bootstrap');
+/*
+    require('jquery-ui');
+*/
+
+
+
 } catch (e) {}
 
 /**

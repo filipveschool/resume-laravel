@@ -3,7 +3,61 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
-@import "variables";
+@import "variables-override";
 
 // Bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
+
+//@import "~gridlex/src/gridlex";
+//@import "../../../node_modules/gridlex/src/gridlex";
+
+
+//functions
+
+@import "functions/mapping";
+@import "functions/color";
+
+//settings
+@import "settings/settings";
+@import "settings/colors";
+
+@import "customStyles";
+
+//mixins
+@import 'mixins/positioning-mixins';
+@import "mixins/font-mixins";
+
+@import "base/animations";
+@import "base/typography";
+
+//helpers
+@import "helpers/lists-hack";
+@import "helpers/spacings";
+@import "helpers/backgrounds";
+@import "helpers/center";
+@import "helpers/shadows";
+
+//patterns
+@import "patterns/heroimage";
+@import "patterns/sections";
+@import "patterns/profile";
+
+@import "patterns/experiencesandeducation";
+@import "patterns/features";
+
+
+@import "patterns/contact";
+@import "patterns/footer";
+
+//components
+@import "components/all-buttons";
+@import "components/headings";
+@import "components/lead";
+@import "components/scroll-top";
+
+//themes
+@import "themes/themes";
+
+//fonts
+@import "fonts/etline";
+@import "fonts/elegantfont";

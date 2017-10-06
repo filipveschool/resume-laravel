@@ -1,0 +1,69 @@
+.profile--description {
+  padding: 0 60px;
+
+  h2 {
+    //text-align: center;
+    //text-transform: uppercase;
+    //font-family: 'Oswald';
+    font-size: 32px;
+    //font-weight: normal;
+    line-height: 1.3em;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    //color: #4ac3bf;
+    color: #444;
+    font-weight: 300;
+    margin-bottom: 20px;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  .hireme-button {
+    background-color: #333;
+    text-decoration: none;
+    letter-spacing: 1px;
+    &:hover {
+      background-color: #4ac3bf;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+}
+
+ul.self-information {
+  border: 5px dotted #000;
+  list-style: outside none none;
+  margin: 30px 0 0;
+  padding: 20px 60px 13px;
+
+  li {
+    margin-bottom: 8px;
+
+    span {
+      &.title {
+        //font-size: 14px;
+        font-weight: 700;
+        margin-right: 10px;
+      }
+
+      &.self-content {
+        //font-size: 14px;
+        font-weight: 400;
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+

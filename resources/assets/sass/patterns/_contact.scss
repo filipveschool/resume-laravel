@@ -1,0 +1,65 @@
+.section--contact {
+  background-image: url(../images/bg/contact_bg.jpg);
+}
+
+// general input fields
+
+textarea {
+  overflow: auto;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input, select, textarea {
+  height: 38px;
+  border: 1px solid #e6ebed;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0 16px;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  color: #7a7a7a;
+  font-size: 14px;
+}
+
+// Specific input fields stylin
+
+#contact-form input[type="text"], #contact-form input[type="email"], #contact-form textarea {
+  color: #fff;
+  border-color: transparent;
+}
+
+#contact-form .message {
+  height: 50px;
+  width: 100%;
+  font-size: 13px;
+  line-height: 50px;
+  text-align: center;
+  float: none;
+  margin-top: 20px;
+  display: none;
+  color: #fff;
+}
+
+.textarea--comment {
+  height: 180px;
+  padding: 8px 16px;
+}
+
+#contact-form input[type="text"], #contact-form input[type="email"], #contact-form textarea {
+  color: #fff;
+  border-color: transparent;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #fff;
+}
+
+#contact-form input[type="text"]:focus, #contact-form input[type="email"]:focus, #contact-form textarea:focus {
+  border-color: #fff;
+}
+

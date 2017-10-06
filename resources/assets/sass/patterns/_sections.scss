@@ -1,0 +1,98 @@
+.section-title {
+  text-transform: capitalize;
+  //margin-bottom: 80px;
+
+  h1 {
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 700;
+    //
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: #22313f;
+  }
+}
+
+.section-wrap {
+  padding: 120px 0;
+  overflow: hidden;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/// Section skills
+
+//TODO section-abilities is verandert naar section-skills
+.section--skills {
+
+  .container,
+  .filipcontainer {
+    max-width: 1280px;
+    padding: 40px 180px;
+  }
+
+  /*  @include gridlex-sm-break {
+      .filipcontainer,
+      .container{
+        padding: 60px 20px;
+        min-width: 280px;
+      }
+}*/
+
+  @include media-breakpoint-down(sm) {
+    .filipcontainer,
+    .container{
+      padding: 60px 20px;
+      min-width: 280px;
+    }
+  }
+
+    .ability-title {
+    //display: inline-block;
+    //width: 60%;
+  }
+
+  .ability-score {
+    float: right;
+
+    .fa {
+      color: #dfe0e0;
+      font-size: 14px;
+      transition: all 0.3s;
+
+      &.filled {
+        //color: #22a39f;
+        color: $theme-color-2;
+
+      }
+    }
+  }
+
+}
+
+.skills-list {
+
+  & > li {
+    min-height: 30px;
+    padding: 3px 0;
+  }
+}
+
+/////////
+//
+// Sections contact
+//
+////////
+
+.section--contact {
+  h2 {
+    color: white-color();
+
+  }
+}

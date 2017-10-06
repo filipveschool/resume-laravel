@@ -1,0 +1,47 @@
+.heading-line:before,
+.heading-line:after {
+  background: #333;
+  content: ' ';
+  //position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 80px;
+  //margin: 0 10px;
+  margin: 10px 10px;
+  display: inline-block;
+  zoom: 1;
+}
+
+/*@include gridlex-sm-break() {
+  .heading-line:before,
+  .heading-line:after {
+    width: 50px;
+  }
+}*/
+
+/*@include gridlex-xs-break {
+  .heading-line:before,
+  .heading-line:after {
+    display: none;
+  }
+}*/
+
+.heading-line:after {
+  left: 100%;
+}
+
+.heading-line:before {
+  right: 100%;
+}
+
+// subheadings
+
+.subheading {
+  font-family: "Montserrat", Serif;
+  font-size: 12px;
+  color: #f36b21;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  margin-bottom: 24px;
+  display: inline-block;
+}

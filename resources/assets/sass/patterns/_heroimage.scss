@@ -1,0 +1,261 @@
+.header-section {
+  background: url(../images/pexels-photo.jpeg) center center no-repeat fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.hero {
+  background-image: url(../images/mountainsnewzealand.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100 wh;
+  height: 100vh;
+  display: flex;
+
+  position: relative;
+  z-index: 0;
+
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(34, 49, 63, 0.9);
+    opacity: 0.5;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+  }
+}
+
+/*@include gridlex-xs-break {
+  .hero--familyname {
+    display: block;
+  }
+}*/
+
+.button.dualbuttonwidth {
+  width: 405px;
+  text-align: center;
+
+  &:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+/*
+@include gridlex-xs-break {
+  .button.dualbuttonwidth {
+    width: 100%;
+  }
+}
+*/
+
+.cv-download-btn i.fa {
+  padding-right: 8px;
+}
+
+.hero-ontop {
+  z-index: 1;
+}
+
+.mw400 {
+  max-width: 400px;
+}
+
+.w400 {
+  width: 400px;
+}
+
+.center-content-nowidth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.center-content {
+  //width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+
+  & h1, h3 {
+    color: white;
+    line-height: 1;
+  }
+
+  & h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    //margin-bottom: 0;
+    margin-bottom: 20px;
+    text-align: center;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    display: inline-block;
+  }
+  & h3 {
+    margin-bottom: 40px;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+
+  .button {
+    text-transform: uppercase;
+    color: white;
+    padding: 20px;
+    border: 1px solid white;
+    text-decoration: none;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.7);
+      color: white;
+    }
+  }
+}
+
+/*@include gridlex-xs-break {
+  .center-content h1 {
+    font-size: 2.4em;
+  }
+
+  .center-content h3 {
+    font-size: 1.4em;
+  }
+
+}*/
+
+.social-global {
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+
+  a {
+    color: #fff;
+    margin: 0 1.25%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 100em;
+    &.foursquare {
+      font-size: 20px;
+    }
+
+    &.facebook {
+      background-color: social-color(facebook);
+    }
+
+    &.twitter {
+      background-color: social-color(twitter);
+    }
+    &.google-plus {
+      background-color: social-color(google-plus);
+    }
+    &.linkedin {
+      background-color: social-color(linkedin);
+    }
+
+    &.youtube {
+      background-color: social-color(youtube);
+    }
+    &.vimeo {
+      background-color: $bc-vimeo;
+    }
+    &.instagram {
+      //background-color: social-color(instagram);
+      background-color: #3f729b;
+    }
+    &.pinterest {
+      background-color: social-color(pinterest);
+    }
+    &.dribbble {
+      background-color: $bc-dribbble;
+    }
+    &.flickr {
+      background-color: $bc-flickr;
+    }
+    &.behance {
+      background-color: $bc-behance;
+    }
+    &.rss {
+      background-color: $bc-rss-2;
+    }
+    &.github {
+      background-color: social-color(github);
+    }
+    &.spotify {
+      background-color: social-color(spotify);
+    }
+
+    &:hover {
+      &.facebook {
+        background-color: #3b5998;
+      }
+      &.twitter {
+        background-color: #00abf0;
+      }
+      &.google-plus {
+        background-color: #d84b35;
+      }
+      &.linkedin {
+        background-color: #1a81ad;
+      }
+      &.xing {
+        background-color: #006567;
+      }
+      &.foursquare {
+        background-color: #0f6bb6;
+      }
+      &.youtube {
+        background-color: #cc181e;
+      }
+      &.vimeo {
+        background-color: #4bf;
+      }
+      &.instagram {
+        background-color: #3f729b;
+      }
+      &.pinterest {
+        background-color: #cd1f28;
+      }
+      &.dribbble {
+        background-color: #ea4b8b;
+      }
+      &.flickr {
+        background-color: #ff0084;
+      }
+      &.behance {
+        background-color: #1769ff;
+      }
+      &.tumblr {
+        background-color: #36465d;
+      }
+      &.soundcloud {
+        background-color: #f50;
+      }
+      &.rss {
+        background-color: #fe6e00;
+      }
+      &.github {
+        background-color: social-color(github);
+      }
+      &.spotify {
+        background-color: social-color(spotify);
+      }
+    }
+  }
+}

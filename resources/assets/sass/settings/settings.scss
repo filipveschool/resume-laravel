@@ -1,0 +1,52 @@
+// border
+
+$border-radius-map: (
+        xs: 1px,
+        s: 3px,
+        default: 5px,
+        m: 7px,
+        l: 11px,
+        xl: 21px,
+) !default;
+
+$breakpoint: (
+        horizontal: (
+                xs: 480px,
+                s: 800px,
+                m: 1000px,
+                l: 1400px,
+                xl: 2000px,
+        ),
+        vertical: (
+                xs: 480px,
+                s: 800px,
+                m: 1000px,
+                l: 1400px,
+                xl: 2000px,
+        )
+) !default;
+
+$z-index: (
+        modal: 5000,
+        toolbar: 2000,
+        header1: 1060,
+        modal-backdrop: 1040,
+        navbar: 1030,
+        tooltip:1020,
+        popover: 1010,
+        dropdown: 1000,
+        fixed: 500,
+        footer: 11,
+        above: 10,
+        about: 5,
+        default: 1,
+        below: -1,
+) !default;
+
+// themes
+
+$theme-color: #1ed3a6;
+$theme-color-2: #f36b21;
+
+
+

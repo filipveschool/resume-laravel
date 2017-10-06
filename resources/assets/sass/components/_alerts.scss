@@ -1,0 +1,65 @@
+
+.alert, .alert--info, .alert--success, .alert--warning, .alert--error,
+.alert--danger {
+  padding: 1rem;
+}
+
+.alert + .alert, .alert--info + .alert, .alert--success + .alert, .alert--warning + .alert, .alert--error + .alert,
+.alert--danger + .alert, .alert + .alert--info, .alert--info + .alert--info, .alert--success + .alert--info, .alert--warning + .alert--info, .alert--error + .alert--info,
+.alert--danger + .alert--info, .alert + .alert--success, .alert--info + .alert--success, .alert--success + .alert--success, .alert--warning + .alert--success, .alert--error + .alert--success,
+.alert--danger + .alert--success, .alert + .alert--warning, .alert--info + .alert--warning, .alert--success + .alert--warning, .alert--warning + .alert--warning, .alert--error + .alert--warning,
+.alert--danger + .alert--warning, .alert + .alert--error, .alert--info + .alert--error, .alert--success + .alert--error, .alert--warning + .alert--error, .alert--error + .alert--error,
+.alert--danger + .alert--error, .alert +
+.alert--danger, .alert--info +
+.alert--danger, .alert--success +
+.alert--danger, .alert--warning +
+.alert--danger, .alert--error +
+.alert--danger,
+.alert--danger +
+.alert--danger {
+  margin-top: 1rem;
+}
+
+.alert:empty, .alert--info:empty, .alert--success:empty, .alert--warning:empty, .alert--error:empty,
+.alert--danger:empty {
+  display: none;
+}
+
+.alert.-small, .-small.alert--info, .-small.alert--success, .-small.alert--warning, .-small.alert--error,
+.-small.alert--danger {
+  font-size: 0.85rem;
+  padding: 0.75rem;
+}
+
+.alert.-medium, .-medium.alert--info, .-medium.alert--success, .-medium.alert--warning, .-medium.alert--error,
+.-medium.alert--danger {
+  font-size: 1.35rem;
+  padding: 0.75rem;
+}
+
+.alert.-large, .-large.alert--info, .-large.alert--success, .-large.alert--warning, .-large.alert--error,
+.-large.alert--danger {
+  font-size: 1.8rem;
+  padding: 0.75rem;
+}
+
+.alert--info {
+  color: #024271;
+  background-color: #e6f5ff;
+}
+
+.alert--success {
+  color: #236510;
+  background-color: #d7e8aa;
+}
+
+.alert--warning {
+  color: #734d00;
+  background-color: #fff2e0;
+}
+
+.alert--error,
+.alert--danger {
+  color: #63010e;
+  background-color: #fcebec;
+}

@@ -3,6 +3,19 @@
 return [
 
     /*
+	 * Social media account links
+	 */
+
+    'social_media' => [
+        'facebook'  => 'https://www.facebook.com/filip.vandeneynde.7',
+        'twitter'   => 'https://twitter.com/vdefilip',
+        'instagram' => 'https://www.instagram.com/filipve1/',
+        'linkedin'  => 'https://www.linkedin.com/in/filipve',
+        'spotify'  => 'https://open.spotify.com/user/118050727',
+        'github'  => 'https://github.com/filipveschool',
+    ],
+
+    /*
     |--------------------------------------------------------------------------
     | Application Name
     |--------------------------------------------------------------------------
@@ -65,7 +78,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Brussels',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +91,20 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => env( 'APP_LOCALE', 'nl' ),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Supported locales
+    |--------------------------------------------------------------------------
+    |
+    | This is not a default Laravel option, but custom made for FVE
+    |
+    */
+
+    'locales'         => [ 'nl', 'en' ],
+    'backLocales'     => [ 'nl' ],
+    'fragmentLocales' => [ 'nl' ],
 
     /*
     |--------------------------------------------------------------------------

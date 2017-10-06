@@ -1,0 +1,25 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #121212;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 16px;
+  //color: #7a7a7a;
+  color: $p-text-color;
+  font-weight: normal;
+  line-height: 25px;
+  margin: 0 0 10px;
+}
+
+
+
+b, strong {
+  font-weight: 500;
+}

@@ -1,0 +1,11 @@
+@function mapping($map, $key, $parse: false) {
+  @if not map-has-key($map, $key) {
+    @return $key;
+  }
+
+  @if not $parse {
+    @return map-get($map, $key);
+  } @else {
+    @return #{map-get($map, $key)};
+  }
+}
